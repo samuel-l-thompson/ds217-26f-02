@@ -2,7 +2,7 @@
 
 ## Project description
 
-This project utilizes several scripts in order to  develop an encounter summary for visits.
+This project utilizes several scripts in order to  develop an encounter summary for visits. YOu are able to enter a specific BP cut off to flag all individuals with a BP over this value
 
 ## Run
 
