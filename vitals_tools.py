@@ -2,24 +2,30 @@
 
 
 def systolic_readings(encounters):
-    """TODO: describe what this pulls out of the encounter records."""
-    # TODO: collect the systolic value of every encounter into one list.
-    pass
+    """Return the systolic blood pressure reading stored in encounter records."""
+    readings = []
+    for encounter in encounters:
+        readings.append(encounter["systolic"])
+    return readings
 
 
 def mean_systolic(readings):
-    """TODO: describe what this returns, including the empty-list result."""
-    # TODO: return None when there is nothing to average, then sum() / len().
-    pass
+    """Return the systolic blood pressure reading stored in encounter records."""
+    if not readings:
+        return None
+    return round((sum(readings) / len(readings)), 1)
 
 
 def count_patients(encounters):
-    """TODO: describe what this counts."""
-    # TODO: collect the patient IDs and keep only the distinct ones.
-    pass
+    """Return the number of patient IDs that are unique."""
+    unique_patients = {encounter["patient_id"] for encounter in encounters}
+    return len(unique_patients)
 
 
 def patients_at_or_above(encounters, cutoff):
-    """TODO: describe which patient IDs come back."""
-    # TODO: keep each patient whose systolic reading is at or above cutoff.
-    pass
+    """Will keep each patient whose systolic reading is at or above the cutoff."""
+    above_cutoff = []
+    for encounter in encounters:
+        if encounter["systolic"] >= cutoff:
+            above_cutoff.append(encounter["patient_id"])
+    return above_cutoff

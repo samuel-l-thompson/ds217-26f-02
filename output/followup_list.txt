@@ -1,0 +1,17 @@
+Cutoff: 130 mmgHG
+Reason: Because we need to ensure we are capturing all patients with elevated blood pressure
+P002
+P005
+P006
+P009
+P011
+P014
+P015
+P018
+P020
+P006
+P022
+P023
+P025
+P011
+P028
